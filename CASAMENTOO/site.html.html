@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>União de Cátia e Tiago</title>
+    <style>
+        body {
+            font-family: 'Great Vibes', cursive;
+            background: linear-gradient(45deg, #fff5f5 0%, #f8f0ff 100%);
+            color: #6d5d6e;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            background-image: url('floral-border.png'), url('floral-border.png');
+            background-position: left top, right bottom;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background: rgba(255, 245, 245, 0.95);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0dde8;
+            box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
+        }
+
+        header .logo img {
+            max-width: 180px;
+            border: 3px solid #e7c6ff;
+            padding: 5px;
+            border-radius: 50%;
+            transition: transform 1s ease;
+        }
+
+        header .logo img:hover {
+            transform: rotate(360deg);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 25px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #9a6fb0;
+             font-family: 'Tangerine', cursive;
+            font-size: 30px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #c895d1;
+        }
+
+        nav ul li::after {
+            content: '♥';
+            position: absolute;
+            right: -30px;
+            color: #e7c6ff;
+        }
+
+        nav ul li:last-child::after {
+            content: none;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin: 50px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(150, 100, 130, 0.1);
+            border: 1px solid #f8e0f0;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1, h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #9a6fb0;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(154, 111, 176, 0.1);
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 20px 0;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            color: #8a7f8f;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        button {
+            background: linear-gradient(45deg, #c895d1, #9a6fb0);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            cursor: pointer;
+            font-size: 1.1em;
+            border-radius: 30px;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(154, 111, 176, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(154, 111, 176, 0.4);
+        }
+
+        button::before {
+            content: '♥';
+            position: absolute;
+            left: -20px;
+            transition: left 0.3s ease;
+        }
+
+        button:hover::before {
+            left: 10px;
+        }
+
+        footer {
+            background: rgba(255, 245, 245, 0.95);
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #f0dde8;
+            color: #9a6fb0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .heart-separator {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2em;
+            color: #e7c6ff;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-heart {
+            animation: float 3s ease-in-out infinite;
+            font-size: 2em;
+            text-align: center;
+            margin: 20px 0;
+        }
+		
+							.romantic-button {
+    background-color: white;
+    color: #4B0082;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    border: 3px solid #E6E6FA;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(230, 230, 250, 0.6);
+}
+
+.romantic-button:hover {
+    background-color: #E6E6FA;
+    color: #4B0082;
+    box-shadow: 0px 8px 20px rgba(75, 0, 130, 0.3);
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+				</style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Parisienne&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+	<img src="florr.png" alt="Decoração Esquerda" width="130" align="left" style="transform:  scaleX(-1);">
+	<img src="florr.png" alt="Decoração Esquerda" width="130" align="right">
+        <div class="logo">
+            <img src="logooo.png" alt="Coração Entrelaçado" id="logo" width="90">
+        </div>
+			
+        <nav>
+            <ul>
+                <li><a href="#sobre">Bem Vindo!</a></li>
+                <li><a href="#local">A Cerimónia</a></li>
+				<li><a href="#copo">Copo de Água</a></li>
+                <li><a href="#locall">Onde Ficar</a></li>
+                <li><a href="#confirmar">Confirma!</a></li>
+				<li><a href="#sugestoes">Sugestões!</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="floating-heart">♥</div>
+        
+        <section id="sobre">
+            <h1>Cátia & Tiago</h1>
+            <div class="heart-separator">♥ ♥ ♥</div>
+            <p style="font-size: 25px;">Sim, é verdade! Nós vamos casar!!!
+
+					Estamos nas nuvens e queremos partilhar todo o nosso amor contigo. Por isso estamos a preparar um casamento que ficará na história e no qual te vais divertir muito. 
+
+					Enquanto não chega o grande dia criámos um site com algumas secções para que todos estejam ao corrente das novidades e da nossa história de amor.
+
+					Uma coisa importante, na secção presença, poderás confirmar se vais ou não ao casamento. Confirma-nos o mais rapidamente possível para que seja muito mais fácil organizar tudo.
+
+					Desfruta do nosso site e até breve! Mil beijos!</p>
+            <p style="font-size: 25px;"><br>
+            <strong>27 de Setembro de 2025</strong></p>
+        </section>
+
+        
+		
+        <section id="local">
+            <h2>A Cerimónia</h2>
+            <div class="heart-separator">✿</div>
+			<p style="font-size: 25px;">Não queremos que percas o casamento por nada deste mundo. Aqui poderás consultar sempre o local da cerimónia e do copo-de-água. Não tens desculpas para chegar tarde!</p>,<br>
+            <p>                           </p>
+			<p align="center" width="80" style="font-size: 25px;">O Local: <strong></strong></p>
+			<p align="center" width="90" <strong><a href="https://maps.app.goo.gl/9pw65q3s9ar5pxsa6"style="color: #9a6fb0;" target="_blank">Igreja de Vilarinho da Samardã</a></strong></p>
+           
+        </section>
+		
+		<section id="copo">
+            <h2>Copo de Água</h2>
+            <div class="heart-separator">✿</div>
+			<p style="font-size: 25px;"> Aqui podes encontrar o local onde irá decorrer o almoço e a nossa festa!
+					Quinta da Devesa em Cabeceiras de Basto. Se não encontrarem, basta seguirem os restantes convidados :)</p>,<br>
+			<p>                           </p>
+			<p align="center" width="80" style="font-size: 25px;">O Local: <strong></strong></p>
+			<p align="center" width="90" <strong><a href="https://maps.app.goo.gl/fKF8XUaWddijNuRN8"style="color: #9a6fb0;" target="_blank">  Quinta da Devesa </a></strong>.</p>
+           
+        </section>
+		<section id="locall">
+            <h2>Onde Ficar</h2>
+			 <div class="heart-separator">✿</div>
+			<p style="font-size: 25px;">Não queremos que percas nenhum momento do casamento. Aqui poderás consultar sugestões de locais para te 
+			acomodares com a tua família e desfrutar da festa até ao final!</p>,<br>
+			<p>                           </p>
+			
+			<p align="center" width="100" ><a href="https://maps.app.goo.gl/bzo8XoQr4mBfogp58"style="color: #9a6fb0;" target="_blank"><strong>* Basto Vila Hotel: </a></strong></p>
+			<p align="center" width="80" style="font-size: 25px;">Telefone: 253 053 067 <strong></strong></p>,<br>
+			<p align="center" width="100" ><a href="https://maps.app.goo.gl/giTcwW68BzdUDodh9"style="color: #9a6fb0;" target="_blank"><strong>* Bosque da Harmonia: </a></strong></p>
+			<p align="center" width="80" style="font-size: 25px;">Telefone: 965 799 635 <strong></strong></p>,<br>
+			<p align="center" width="100" ><a href="https://maps.app.goo.gl/KX3vKBysF25AUFLQ8"style="color: #9a6fb0;" target="_blank"><strong>* Casa da Tojeira: </a></strong></p>
+			<p align="center" width="80" style="font-size: 25px;">Telefone: 253 663 169 <strong></strong></p>,<br>
+			<p align="center" width="100" ><a href="https://maps.app.goo.gl/zv191GyhooYRyPbR8"style="color: #9a6fb0;" target="_blank"><strong>* Casa de Carcavelos: </a></strong></p>
+			<p align="center" width="80" style="font-size: 25px;">Telefone: 966 805 290 <strong></strong></p>,<br>
+			<p align="center" width="100" ><a href="https://maps.app.goo.gl/Ye449yJVeifzA9sY8"style="color: #9a6fb0;" target="_blank"><strong>* Residencial A Cafreal: </a></strong></p>
+			<p align="center" width="80" style="font-size: 25px;">Telefone: 966 555 053 <strong></strong></p>
+			
+        <section id="confirmar">
+            <h2 style="font-size: 25px;">Acompanhas-nos ou não?</h2>
+            <div class="heart-separator">✦</div>
+            <p style="font-size: 25px;">Por favor, confirma a tua presença até o dia<br><strong>31 de Julho de 2025</strong></p>
+            <p>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrgdR88P8Jw2xzv-3A_fnAbvDzlm6bFTCHOTSPTflZVnxs1w/viewform?usp=dialog" target="_blank" style="text-decoration: none;">
+    <button class="romantic-button">Confirmar Presença</button>
+				</a>
+            </p>
+        </section>
+		
+		<section id="locall">
+            <h2>Deixa-nos a tua ideia !</h2>
+            <div class="heart-separator">✿</div>
+			 <p style="font-size: 25px;">Este dia não é só nosso, também será teu! 
+				Deixa-nos aqui a tua sugestão para tornar este dia ainda mais memorável!
+			Partilha connosco as tuas ideias :)</p>
+            <p>
+               
+				
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLScvpyzR-yZHf-46l55DVP3MFjL_bPaE1OTuHvuyOkJ2EbshKA/viewform?usp=header" target="_blank" style="text-decoration: none;">
+    <button class="romantic-button">Sugestões</button>
+</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p style="font-size: 20px;">O caminho é mais bonito quando estamos ao lado de pessoas especiais!</p>
+    </footer>
+</body>
+</html>

@@ -23,6 +23,7 @@
             text-align: center;
             border-bottom: 1px solid #f0dde8;
             box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
+			 overflow: hidden; /* Para garantir que a imagem não ultrapasse */
         }
 
         header .logo img {
@@ -33,9 +34,7 @@
             transition: transform 1s ease;
         }
 
-        header .logo img:hover {
-            transform: rotate(360deg);
-        }
+       
 
         nav ul {
             list-style: none;
@@ -208,9 +207,7 @@
     <header>
 	<img src="florr.png" alt="Decoração Esquerda" width="130" align="left" style="transform:  scaleX(-1);">
 	<img src="florr.png" alt="Decoração Esquerda" width="130" align="right">
-        <div class="logo">
-            <img src="logooo.png" alt="Coração Entrelaçado" id="logo" width="90">
-        </div>
+        
 			
         <nav>
             <ul>
@@ -289,7 +286,7 @@
 			<p align="center" width="80" style="font-size: 25px;">Telefone: 966 555 053 <strong></strong></p>
 			
         <section id="confirmar">
-            <h2 style="font-size: 25px;">Acompanhas-nos ou não?</h2>
+            <h2 style="font-size: 25px;">Acompanhas-nos ?</h2>
             <div class="heart-separator">✦</div>
             <p style="font-size: 25px;">Por favor, confirma a tua presença até ao dia<br><strong>31 de Julho de 2025</strong></p>
             <p>
@@ -300,7 +297,7 @@
             </p>
         </section>
 		
-		<section id="locall">
+		<section id="sugestoes">
             <h2>Deixa-nos a tua ideia !</h2>
             <div class="heart-separator">✿</div>
 			 <p style="font-size: 25px;">Este dia não é só nosso, também será teu! 
@@ -317,7 +314,7 @@
     </main>
 
     <footer>
-        <p style="font-family: 'Dancing Script', cursive; font-size: 25px;">O caminho é mais bonito quando estamos ao lado de pessoas especiais!</p>
+         <p style="font-family: 'Dancing Script', cursive; font-size: 25px;">O caminho é mais bonito quando estamos ao lado de pessoas especiais!</p>
     </footer>
 </body>
 </html>

@@ -18,6 +18,23 @@
             background-repeat: no-repeat;
         }
 
+	    header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Agora realmente ocupa toda a largura */
+    background: rgba(255, 245, 245, 0.95);
+    padding: 10px 0; /* Mantém o espaçamento como antes */
+    text-align: center;
+    border-bottom: 1px solid #f0dde8;
+    box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 		/* Estilo padrão do header */
 @media (max-width: 768px) { 
     header {

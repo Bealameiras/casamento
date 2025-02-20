@@ -17,78 +17,27 @@
             background-position: left top, right bottom;
             background-repeat: no-repeat;
         }
-
-	  
-
- 🌟 Cabeçalho fixo ocupando 100% da tela */
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Agora realmente ocupa toda a largura */
+    width: 100%;
     background: rgba(255, 245, 245, 0.95);
-    padding: 10px 0; /* Mantém o espaçamento como antes */
+    padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid #f0dde8;
     box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    overflow: hidden; /* Garante que os elementos dentro do cabeçalho não extrapolem */
 }
 
-/* 🔹 Ajuste das imagens */
-.decoracao-esquerda, .decoracao-direita {
-    width: 130px; /* Voltei para o tamanho original */
-    flex-shrink: 0; /* Evita que fiquem deformadas */
-}
-
-.decoracao-esquerda {
-    transform: scaleX(-1); /* Mantém a inversão da esquerda */
-}
-
-/* 🔹 Menu centralizado */
-nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 25px; /* Mantém o espaçamento como antes */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #9a6fb0;
-    font-family: 'Tangerine', cursive;
-    font-size: 30px;
-    transition: all 0.3s ease;
-}
-
-/* 📱 Ajustes para celular */
+/* Ajuste apenas para telas menores que 768px */
 @media (max-width: 768px) { 
     header {
-        padding: 5px 0; /* Reduz um pouco o espaço interno */
-    }
-
-    .decoracao-esquerda, .decoracao-direita {
-        width: 100px; /* Reduz as imagens no celular */
-    }
-
-    nav ul {
-        gap: 10px; /* Diminui um pouco o espaço entre itens */
-    }
-
-    nav ul li a {
-        font-size: 25px; /* Reduz um pouco a fonte */
+        padding: 10px 0; /* Reduz o espaço interno apenas no mobile */
     }
 }
-
+			
         header .logo img {
             max-width: 180px;
             border: 3px solid #e7c6ff;
@@ -268,9 +217,8 @@ nav ul li a {
 </head>
 <body>
     <header>
-	   
-	<img src="florr.png" alt="Decoração Esquerda"  class="decoracao-esquerda" width="130" align="left" style="transform:  scaleX(-1);">
-	
+	<img src="florr.png" alt="Decoração Esquerda" width="130" align="left" style="transform:  scaleX(-1);">
+	<img src="florr.png" alt="Decoração Esquerda" width="130" align="right">
         
 			
         <nav>
@@ -283,7 +231,7 @@ nav ul li a {
 				<li><a href="#sugestoes">Sugestões!</a></li>
             </ul>
         </nav>
-<img src="florr.png" alt="Decoração Direita"  class="decoracao-direita"  width="130" align="right">
+
     </header>
 
     <main>

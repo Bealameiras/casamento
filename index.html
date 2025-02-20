@@ -18,19 +18,23 @@
             background-repeat: no-repeat;
         }
 
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: rgba(255, 245, 245, 0.95);
+			padding: 20px 0;
+			text-align: center;
+			border-bottom: 1px solid #f0dde8;
+			box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
+			z-index: 1000;
+		}
+			/* Ajuste para telas menores (telemóveis) */
+		@media (max-width: 768px) {
 			header {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				background: rgba(255, 245, 245, 0.95);
-				padding: 20px 0;
-				text-align: center;
-				border-bottom: 1px solid #f0dde8;
-				box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
-				z-index: 1000;
-				overflow: hidden; /* Garante que os elementos dentro do cabeçalho não extrapolem */
-				}
+				padding: 10px 0; /* Reduz a altura do cabeçalho */
+			}
 
         header .logo img {
             max-width: 180px;
@@ -43,24 +47,30 @@
        
 
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0 0;
+             display: flex;
+        flex-direction: column;
+        padding: 0;
         }
 
         nav ul li {
-            display: inline-block;
-            margin: 0 25px;
-            position: relative;
+            margin: 5px 0; /* Espaçamento menor entre os itens */
         }
 
         nav ul li a {
-            text-decoration: none;
-            color: #9a6fb0;
-             font-family: 'Tangerine', cursive;
-            font-size: 30px;
-            transition: all 0.3s ease;
-        }
+        font-size: 22px; /* Reduz o tamanho da fonte */
+    }
+}
+
+			/* Ajuste para telas muito pequenas (ex.: telemóveis pequenos) */
+			@media (max-width: 480px) {
+				header {
+					padding: 8px 0; /* Ainda mais compacto */
+				}
+
+				nav ul li a {
+        font-size: 18px; /* Fonte menor para caber no ecrã */
+    }
+}
 
         nav ul li a:hover {
             color: #c895d1;
@@ -229,8 +239,9 @@
     </header>
 
     <main>
-	    <div class="floating-heart" style="margin-top: 200px;">♥</div>
-       
+	<br>
+	<br>
+        <div class="floating-heart">♥</div>
         
         <section id="sobre">
             <h1>Cátia & Tiago</h1>

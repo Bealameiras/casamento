@@ -31,10 +31,30 @@
 				z-index: 1000;
 				overflow: hidden; /* Garante que os elementos dentro do cabeçalho não extrapolem */
 				}
-	    /* Ajuste apenas para telas menores que 768px */
-		@media (max-width: 768px) { 
-		    header {
-        padding: 10px 0; /* Reduz o espaço interno apenas no mobile */
+	   @media (max-width: 768px) { 
+    header {
+        display: flex;
+        align-items: center; /* Alinha os itens verticalmente */
+        justify-content: space-between; /* Espaço entre a logo e o menu */
+        padding: 10px 15px; /* Reduz o padding */
+    }
+
+    header .logo img {
+        max-width: 100px; /* Diminui o tamanho da logo no mobile */
+    }
+
+    nav ul {
+        margin-top: 0; /* Remove o espaço extra acima do menu */
+        display: flex;
+        gap: 10px; /* Reduz a distância entre os itens do menu */
+    }
+
+    nav ul li {
+        margin: 0; /* Remove margens desnecessárias */
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Ajusta o tamanho do texto do menu */
     }
 }
 

@@ -37,48 +37,42 @@ header {
 @media (max-width: 768px) { 
     header {
         display: flex;
-        flex-direction: column; /* Mantém os elementos empilhados */
-        align-items: center; /* Centraliza tudo */
-        padding: 10px 0; /* Reduz a altura do cabeçalho */
+        align-items: center; /* Alinha os itens verticalmente */
+        justify-content: space-between; /* Distribui os itens na mesma linha */
+        padding: 10px 15px; /* Reduz o padding */
     }
 
-    header .logo {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    header .logo img {
-        max-width: 100px; /* Reduz o tamanho da logo no mobile */
-        margin-bottom: 5px; /* Reduz espaço entre logo e menu */
+    .decoracao-esquerda, .decoracao-direita {
+        width: 130px;
     }
 
     nav {
-        width: 100%; /* Garante que o menu ocupe toda a largura */
-        text-align: center;
+        flex: 1; /* Ocupa o espaço necessário */
+        display: flex;
+        justify-content: center; /* Centraliza o menu */
     }
 
     nav ul {
         display: flex;
-        flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
-        justify-content: center; /* Centraliza os itens do menu */
+        gap: 20px; /* Espaçamento entre os itens */
         padding: 0;
         margin: 0;
-        gap: 8px; /* Reduz o espaço entre os itens */
     }
 
     nav ul li {
-        margin: 0; /* Remove margens extras */
-        display: inline-block; /* Garante que fiquem na mesma linha */
+        margin: 0;
+        display: inline-block;
     }
 
     nav ul li a {
-        font-size: 18px; /* Ajusta o tamanho do texto */
-        display: block;
-        padding: 5px 10px; /* Ajusta o espaçamento para melhor toque */
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    .decoracao-esquerda {
+        transform: scaleX(-1); /* Inverte a imagem à esquerda */
     }
 }
-
         header .logo img {
             max-width: 180px;
             border: 3px solid #e7c6ff;
@@ -258,8 +252,9 @@ header {
 </head>
 <body>
     <header>
-	<img src="florr.png" alt="Decoração Esquerda" width="130" align="left" style="transform:  scaleX(-1);">
-	<img src="florr.png" alt="Decoração Esquerda" width="130" align="right">
+	   
+	<img src="florr.png" alt="Decoração Esquerda"  class="decoracao-esquerda" width="130" align="left" style="transform:  scaleX(-1);">
+	
         
 			
         <nav>
@@ -272,7 +267,7 @@ header {
 				<li><a href="#sugestoes">Sugestões!</a></li>
             </ul>
         </nav>
-
+<img src="florr.png" alt="Decoração Direita"  class="decoracao-direita"  width="130" align="right">
     </header>
 
     <main>

@@ -19,71 +19,75 @@
         }
 
 		/* Estilo padrão do header */
+/* 🌟 Correção do header */
 header {
     display: flex;
-    align-items: center; /* Alinha tudo na mesma altura */
-    justify-content: space-between; /* Mantém os elementos distribuídos corretamente */
-    width: 100vw; /* Garante que o cabeçalho ocupa 100% da largura da tela */
-    height: auto; /* Ajusta a altura dinamicamente */
-    padding: 10px; /* Espaçamento interno */
-    box-sizing: border-box; /* Evita que padding quebre a largura */
-    position: fixed; /* Fixa o cabeçalho no topo */
+    align-items: center; /* Mantém tudo na mesma altura */
+    justify-content: space-between; /* Mantém as imagens nas bordas e o menu centralizado */
+    width: 100%; /* Agora ocupa toda a largura corretamente */
+    height: auto; /* Ajusta dinamicamente conforme o conteúdo */
+    padding: 10px 5px; /* Ajusta o espaço interno */
+    box-sizing: border-box;
+    position: fixed;
     top: 0;
     left: 0;
     background: rgba(255, 245, 245, 0.95);
     z-index: 1000;
-    overflow: hidden; /* Evita qualquer corte */
+    overflow: hidden;
 }
 
+/* 🔹 Ajuste das imagens do cabeçalho */
 .decoracao-esquerda, .decoracao-direita {
-    width: 15%; /* Ocupa 15% da tela para garantir equilíbrio */
-    max-width: 100px; /* Evita que as imagens fiquem gigantes */
+    width: 80px; /* Reduzi para não ocupar muito espaço */
     flex-shrink: 0; /* Impede que diminuam demais */
 }
 
+/* 🔹 Menu Centralizado */
 nav {
-    flex-grow: 1; /* O menu ocupa todo o espaço disponível */
+    flex-grow: 1; /* Garante que o menu ocupe o espaço necessário */
     display: flex;
     justify-content: center; /* Centraliza o menu */
 }
 
 nav ul {
     display: flex;
-    gap: 15px; /* Espaço entre itens */
+    gap: 15px; /* Ajusta o espaçamento entre os itens */
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 nav ul li a {
-    font-size: 18px; /* Tamanho da fonte ajustado */
+    font-size: 18px;
     padding: 5px;
-    text-decoration: none; /* Remove sublinhado */
+    text-decoration: none;
 }
 
+/* 🔹 Inverte a imagem da esquerda */
 .decoracao-esquerda {
-    transform: scaleX(-1); /* Inverte a imagem esquerda */
+    transform: scaleX(-1);
 }
 
-/* 🔹 Ajustes para telas menores */
+/* 📱 Ajustes para celular */
 @media (max-width: 768px) { 
     header {
-        padding: 5px; /* Reduz o espaço interno */
+        padding: 5px; /* Ajusta o espaço interno */
+        justify-content: space-around; /* Melhor distribuição dos elementos */
     }
 
     .decoracao-esquerda, .decoracao-direita {
-        width: 20%; /* Garante que as imagens fiquem proporcionais */
-        max-width: 80px; /* Ajusta o tamanho das imagens no celular */
+        width: 60px; /* Reduz o tamanho das imagens no celular */
     }
 
     nav ul {
-        gap: 8px; /* Reduz o espaçamento dos links no celular */
+        gap: 8px;
     }
 
     nav ul li a {
-        font-size: 16px; /* Diminui um pouco a fonte para caber bem */
+        font-size: 14px; /* Reduz um pouco a fonte */
     }
 }
+
         header .logo img {
             max-width: 180px;
             border: 3px solid #e7c6ff;

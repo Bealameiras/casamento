@@ -5,18 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>União de Cátia e Tiago</title>
     <style>
-        body {
-            font-family: 'Great Vibes', cursive;
-            background: linear-gradient(45deg, #fff5f5 0%, #f8f0ff 100%);
-            color: #6d5d6e;
-            margin: 0;
-            padding-top: 150px; /* Ajuste para garantir que o conteúdo não fique atrás do cabeçalho */
-			overflow: auto; /* Garante a rolagem da página */
-            line-height: 1.8;
-            background-image: url('floral-border.png'), url('floral-border.png');
-            background-position: left top, right bottom;
-            background-repeat: no-repeat;
-        }
+       
 	    /* Remove o padding-top no body */
 body {
     font-family: 'Great Vibes', cursive;
@@ -33,10 +22,15 @@ body {
 
 /* Ajuste no html para garantir que o scroll não se sobreponha ao cabeçalho */
 html {
-    scroll-padding-top: 160px; /* Altura do cabeçalho, ajuste conforme necessário */
+    scroll-padding-top: 160px; /* Certifique-se de que este valor corresponda à altura do cabeçalho */
 }
 
-/* Ajuste das seções para garantir que o conteúdo não fique coberto pelo cabeçalho */
+body {
+    padding-top: 0; /* Certifique-se de que o corpo não tenha preenchimento superior */
+}
+
+/* Remover valores duplicados de scroll-margin-top e scroll-padding-top em 'section' e 'html' */
+
 section {
     margin: 50px 0;
     padding: 40px;
@@ -46,7 +40,7 @@ section {
     border: 1px solid #f8e0f0;
     position: relative;
     transition: transform 0.3s ease;
-    scroll-margin-top: 160px; /* Ajuste o valor conforme necessário */
+    scroll-margin-top: 160px; /* Ajuste o valor para corresponder à altura do cabeçalho */
 }
 
 /* Corrigir rolagem suave para links */
@@ -325,7 +319,7 @@ header {
 	    <div></div>
 	    <div></div>	
 	    
-		<section id="copo">
+	<section id="copo">
             <h2>Copo de Água</h2>
             <div class="heart-separator">✿</div>
 			<p style="font-size: 25px;"> Aqui podes encontrar o local onde irá decorrer o almoço e a nossa festa!
@@ -339,7 +333,7 @@ header {
 	    <div></div>
 	    <div></div>
 	    
-		<section id="locall">
+	<section id="locall">
             <h2>Onde Ficar</h2>
 			 <div class="heart-separator">✿</div>
 			<p style="font-size: 25px;">Não queremos que percas nenhum momento do casamento. Aqui poderás consultar sugestões de locais para te 
@@ -356,6 +350,7 @@ header {
 			<p align="center" width="80" style="font-size: 25px;">Telefone: 966 805 290 <strong></strong></p>,<br>
 			<p align="center" width="100" ><a href="https://maps.app.goo.gl/Ye449yJVeifzA9sY8"style="color: #9a6fb0;" target="_blank"><strong>* Residencial A Cafreal: </a></strong></p>
 			<p align="center" width="80" style="font-size: 25px;">Telefone: 966 555 053 <strong></strong></p>
+	</section>
 		<div></div>	
 	    <div></div>
 	    <div></div>

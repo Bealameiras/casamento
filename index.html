@@ -18,43 +18,54 @@
             background-repeat: no-repeat;
         }
 
-			header {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				background: rgba(255, 245, 245, 0.95);
-				padding: 20px 0;
-				text-align: center;
-				border-bottom: 1px solid #f0dde8;
-				box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
-				z-index: 1000;
-				overflow: hidden; /* Garante que os elementos dentro do cabeçalho não extrapolem */
-				}
-	   @media (max-width: 768px) { 
+		/* Estilo padrão do header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 245, 245, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #f0dde8;
+    box-shadow: 0 4px 15px rgba(150, 100, 130, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
     header {
+        display: flex; /* Alinha os elementos lado a lado */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: space-between; /* Espaço entre logo e menu */
+        padding: 10px 15px; /* Reduz a altura do header */
+    }
+
+    header .logo {
         display: flex;
-        align-items: center; /* Alinha os itens verticalmente */
-        justify-content: space-between; /* Espaço entre a logo e o menu */
-        padding: 10px 15px; /* Reduz o padding */
+        align-items: center; /* Mantém a logo centralizada */
     }
 
     header .logo img {
-        max-width: 100px; /* Diminui o tamanho da logo no mobile */
+        max-width: 80px; /* Diminui o tamanho da logo */
     }
 
     nav ul {
-        margin-top: 0; /* Remove o espaço extra acima do menu */
-        display: flex;
-        gap: 10px; /* Reduz a distância entre os itens do menu */
+        display: flex; /* Alinha os itens do menu horizontalmente */
+        margin: 0; /* Remove margens */
+        padding: 0; /* Remove padding */
+        gap: 10px; /* Espaço entre os itens do menu */
+        list-style: none; /* Remove os marcadores da lista */
     }
 
     nav ul li {
-        margin: 0; /* Remove margens desnecessárias */
+        margin: 0; /* Remove margens extras */
     }
 
     nav ul li a {
-        font-size: 18px; /* Ajusta o tamanho do texto do menu */
+        font-size: 18px; /* Reduz o tamanho do menu */
+        text-decoration: none;
     }
 }
 

@@ -38,39 +38,37 @@ header {
     header {
         display: flex;
         align-items: center; /* Alinha os itens verticalmente */
-        justify-content: space-between; /* Distribui os itens na mesma linha */
-        padding: 10px 15px; /* Reduz o padding */
+        justify-content: space-between; /* Distribui os elementos na mesma linha */
+        width: 100%; /* Garante que o cabeçalho ocupe toda a largura da tela */
+        padding: 10px 5px; /* Reduz a altura e ajusta o espaçamento */
+        box-sizing: border-box; /* Garante que padding não aumente o tamanho */
     }
 
     .decoracao-esquerda, .decoracao-direita {
-        width: 130px;
+        width: 80px; /* Reduz o tamanho das imagens para caber melhor */
     }
 
     nav {
-        flex: 1; /* Ocupa o espaço necessário */
+        flex: 1; /* Ocupa o espaço disponível */
         display: flex;
         justify-content: center; /* Centraliza o menu */
     }
 
     nav ul {
         display: flex;
-        gap: 20px; /* Espaçamento entre os itens */
+        gap: 10px; /* Espaçamento entre os itens do menu */
         padding: 0;
         margin: 0;
-    }
-
-    nav ul li {
-        margin: 0;
-        display: inline-block;
+        list-style: none;
     }
 
     nav ul li a {
-        font-size: 18px;
-        padding: 5px 10px;
+        font-size: 16px; /* Reduz o tamanho da fonte para melhor ajuste */
+        padding: 5px;
     }
 
     .decoracao-esquerda {
-        transform: scaleX(-1); /* Inverte a imagem à esquerda */
+        transform: scaleX(-1); /* Mantém a inversão da imagem esquerda */
     }
 }
         header .logo img {

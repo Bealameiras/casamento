@@ -17,6 +17,42 @@
             background-position: left top, right bottom;
             background-repeat: no-repeat;
         }
+	    /* Remove o padding-top no body */
+body {
+    font-family: 'Great Vibes', cursive;
+    background: linear-gradient(45deg, #fff5f5 0%, #f8f0ff 100%);
+    color: #6d5d6e;
+    margin: 0;
+    /* padding-top: 150px; */
+    overflow: auto;
+    line-height: 1.8;
+    background-image: url('floral-border.png'), url('floral-border.png');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+}
+
+/* Ajuste no html para garantir que o scroll não se sobreponha ao cabeçalho */
+html {
+    scroll-padding-top: 160px; /* Altura do cabeçalho, ajuste conforme necessário */
+}
+
+/* Ajuste das seções para garantir que o conteúdo não fique coberto pelo cabeçalho */
+section {
+    margin: 50px 0;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(150, 100, 130, 0.1);
+    border: 1px solid #f8e0f0;
+    position: relative;
+    transition: transform 0.3s ease;
+    scroll-margin-top: 160px; /* Ajuste o valor conforme necessário */
+}
+
+/* Corrigir rolagem suave para links */
+html {
+    scroll-behavior: smooth;
+}
 header {
     position: fixed;
     top: 0;

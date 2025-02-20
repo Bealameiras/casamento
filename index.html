@@ -19,75 +19,45 @@
         }
 
 		/* Estilo padrão do header */
-/* 🌟 Correção do header */
-/* 🌟 Cabeçalho fixo e ajustado */
-header {
-    display: flex;
-    align-items: center; /* Alinha tudo na mesma altura */
-    justify-content: space-between; /* Mantém as imagens nas extremidades e o menu no meio */
-    width: 100vw; /* Garante que ocupa 100% da largura da tela */
-    height: 80px; /* Altura fixa para evitar que fique grande demais */
-    padding: 5px 10px; /* Espaçamento menor */
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 245, 245, 0.95);
-    z-index: 1000;
-}
-
-/* 🔹 Ajuste das imagens */
-.decoracao-esquerda, .decoracao-direita {
-    width: 70px; /* Reduzi para ocupar menos espaço */
-    height: auto;
-    flex-shrink: 0; /* Impede que diminuam demais */
-}
-
-.decoracao-esquerda {
-    transform: scaleX(-1); /* Inverte a imagem da esquerda */
-}
-
-/* 🔹 Menu Centralizado */
-nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px; /* Ajusta o espaçamento entre os itens */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-nav ul li a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #9a6fb0;
-}
-
-/* 📱 Ajustes para celular */
 @media (max-width: 768px) { 
     header {
-        height: 60px; /* Reduz a altura do cabeçalho */
-        padding: 5px;
+        display: flex;
+        align-items: center; /* Alinha os itens verticalmente */
+        justify-content: space-between; /* Distribui os itens na mesma linha */
+        padding: 10px 15px; /* Reduz o padding */
     }
 
     .decoracao-esquerda, .decoracao-direita {
-        width: 50px; /* Reduz o tamanho das imagens no celular */
+        width: 130px;
+    }
+
+    nav {
+        flex: 1; /* Ocupa o espaço necessário */
+        display: flex;
+        justify-content: center; /* Centraliza o menu */
     }
 
     nav ul {
-        gap: 10px; /* Reduz o espaço entre os itens */
+        display: flex;
+        gap: 20px; /* Espaçamento entre os itens */
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        display: inline-block;
     }
 
     nav ul li a {
-        font-size: 16px; /* Reduz um pouco a fonte */
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    .decoracao-esquerda {
+        transform: scaleX(-1); /* Inverte a imagem à esquerda */
     }
 }
-
 
         header .logo img {
             max-width: 180px;

@@ -33,30 +33,26 @@ header {
     overflow: hidden;
 }
 
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
     header {
-        display: flex; /* Alinha os elementos lado a lado */
-        align-items: center; /* Centraliza verticalmente */
-        justify-content: space-between; /* Espaço entre logo e menu */
-        padding: 10px 15px; /* Reduz a altura do header */
-    }
-
-    header .logo {
         display: flex;
-        align-items: center; /* Mantém a logo centralizada */
+        flex-direction: column;
+        align-items: center; /* Centraliza os elementos */
+        padding: 10px 0; /* Reduz o padding */
     }
 
     header .logo img {
-        max-width: 80px; /* Diminui o tamanho da logo */
+        max-width: 120px; /* Reduz o tamanho da logo */
+        margin-bottom: 10px; /* Espaço entre a logo e o menu */
     }
 
     nav ul {
-        display: flex; /* Alinha os itens do menu horizontalmente */
-        margin: 0; /* Remove margens */
-        padding: 0; /* Remove padding */
-        gap: 10px; /* Espaço entre os itens do menu */
-        list-style: none; /* Remove os marcadores da lista */
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
+        justify-content: center; /* Centraliza o menu */
+        padding: 0;
+        margin: 0;
+        gap: 10px; /* Reduz o espaço entre os links */
     }
 
     nav ul li {
@@ -64,8 +60,7 @@ header {
     }
 
     nav ul li a {
-        font-size: 18px; /* Reduz o tamanho do menu */
-        text-decoration: none;
+        font-size: 20px; /* Ajusta o tamanho do texto */
     }
 }
 

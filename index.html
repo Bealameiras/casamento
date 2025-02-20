@@ -10,7 +10,7 @@
             background: linear-gradient(45deg, #fff5f5 0%, #f8f0ff 100%);
             color: #6d5d6e;
             margin: 0;
-            padding-top: 120px; /* Evita que o conteúdo fique escondido atrás do cabeçalho */
+            padding-top: 150px; /* Ajuste para garantir que o conteúdo não fique atrás do cabeçalho */
 			overflow: auto; /* Garante a rolagem da página */
             line-height: 1.8;
             background-image: url('floral-border.png'), url('floral-border.png');
@@ -104,16 +104,12 @@ header {
     transform: translateY(-5px);
 } 
 	    section {
-    scroll-margin-top: 150px; /* Ajuste esse valor conforme a altura do cabeçalho */
+    scroll-margin-top: 160px; /* Ajuste esse valor conforme a altura do cabeçalho */
 }
-	    section::before {
-    content: "";
-    display: block;
-    height: 150px; /* Mesmo valor do cabeçalho */
-    margin-top: -150px;
-    visibility: hidden;
+	    html {
+    scroll-padding-top: 160px; /* Ajuste esse valor conforme a altura do cabeçalho */
 }
-
+	   
         h1, h2 {
             font-family: 'Dancing Script', cursive;
             color: #9a6fb0;

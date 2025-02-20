@@ -100,9 +100,19 @@ header {
             transition: transform 0.3s ease;
         }
 
-        section:hover {
-            transform: translateY(-5px);
-        }
+       /* section:hover {
+    transform: translateY(-5px);
+} */
+	    section {
+    scroll-margin-top: 80px; /* Ajuste esse valor conforme a altura do cabeçalho */
+}
+	    section::before {
+    content: "";
+    display: block;
+    height: 80px; /* Mesmo valor do cabeçalho */
+    margin-top: -80px;
+    visibility: hidden;
+}
 
         h1, h2 {
             font-family: 'Dancing Script', cursive;

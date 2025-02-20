@@ -31,6 +31,12 @@
 				z-index: 1000;
 				overflow: hidden; /* Garante que os elementos dentro do cabeçalho não extrapolem */
 				}
+	    /* Ajuste apenas para telas menores que 768px */
+		@media (max-width: 768px) { 
+		    header {
+        padding: 10px 0; /* Reduz o espaço interno apenas no mobile */
+    }
+}
 
         header .logo img {
             max-width: 180px;
